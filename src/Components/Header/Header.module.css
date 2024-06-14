@@ -1,0 +1,17 @@
+.header {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    color: white;
+    background-color: rgb(234, 107, 27);
+    width:5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+}
