@@ -3,7 +3,7 @@ import styles from './Logo.module.css';
 
 const Logo = () => {
     return (
-        <h1><span>PT</span>Blogs</h1>
+        <h1 className={styles.logo}><span>PT</span>Blogs</h1>
     )
 }
 

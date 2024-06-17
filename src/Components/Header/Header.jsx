@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Header.module.css';
 import Logo from '../Logo/Logo';
-import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
-    const navigate = useNavigate();
-    const handleLogin = () => {
-        navigate('/login');
-    }
+const Header = ({ isLoggedIn, handleLogin, handleLogout, userRole, handleAddUser, handleAddBlog }) => {
+
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.logo}>
                 <Logo />
-                
             </div>
+
             <div>
-                <button onClick={handleLogin}>Login</button>
+                {userRole && <button className={styles.addBlog} onClick={handleAddBlog}>AddBlog</button>}
+                {userRole === 'admin' && <button className={styles.addUser} onClick={handleAddUser}>AddUser</button>}
+                {isLoggedIn ? (
+                    <button className={styles.logoutButton} onClick={handleLogout}>Logout</button>
+                ) : (
+                    <button className={styles.loginButton} onClick={handleLogin}>Login</button>
+                )}
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
