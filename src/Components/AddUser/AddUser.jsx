@@ -3,7 +3,7 @@ import styles from './AddUser.module.css';
 import axios from 'axios';
 import { BACKEND_ENDPOINT } from '../../api';
 
-const AddUser = ({ show, handleClose, setUsers }) => {
+const AddUser = ({ show, handleClose }) => {
     const [userDetails, setUserDetails] = useState({ userName: '', password: '', role: 'author' });
 
     if (!show) {

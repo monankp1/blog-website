@@ -121,8 +121,6 @@ const Home = () => {
         userRole={userRole}
         handleAddUser={handleAddUser}
         handleAddBlog={handleAddBlog}
-
-
       />
       <Blogs userRole={userRole} userName={userName} showAddBlogModal={showAddBlogModal} />
       <About />
